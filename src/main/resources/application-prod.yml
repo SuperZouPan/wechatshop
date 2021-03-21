@@ -1,0 +1,19 @@
+databaseconfig:
+  datasource:
+    username: root
+    password: zoupan123456
+    url: jdbc:mysql://116.62.226.162:3306/wechatshop?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    是否显示SQL
+  jpa:
+    open-in-view: true
+    properties:
+      hibernate:
+        # 解决延迟加载问题
+        enable_lazy_load_no_trans: true
+        # 运行程序会校验数据与数据库的字段类型是否相同，不同会报错
+        ddl-auto: helper
+    show-sql: true
+application:
+  port: 8888
+  context-path: /sell
+  name: sell
