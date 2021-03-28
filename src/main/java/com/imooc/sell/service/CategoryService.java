@@ -1,6 +1,9 @@
 package com.imooc.sell.service;
 
+import com.imooc.sell.dataobject.ProductCategory;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author zoupan
@@ -10,4 +13,8 @@ import org.springframework.stereotype.Service;
 @Service
 public interface CategoryService {
 
+    ProductCategory findOne(Integer categoryId);
+    List<ProductCategory> findAll();
+    List<ProductCategory> findByCategoryTypeIn(List<Integer> integerList);
+    ProductCategory save(ProductCategory productCategory);
 }
